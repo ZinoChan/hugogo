@@ -12,8 +12,6 @@ dist
 dist-ssr
 *.local
 
-static/svelte/
-
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
@@ -24,3 +22,9 @@ static/svelte/
 *.njsproj
 *.sln
 *.sw?
+.hugo_build.lock
+static/svelte/
+public
+resources/
+data/svelte.json
+.env
