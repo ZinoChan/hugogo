@@ -1,0 +1,15 @@
+.box {
+  @apply border-4 rounded-lg;
+}
+
+.box-blue {
+  @apply shadow-1 border-blue1;
+}
+
+.box-grey {
+  @apply shadow-3 border-grey2;
+}
+
+.box-purple {
+  @apply shadow-2 border-purple1;
+}

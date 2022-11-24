@@ -1,0 +1,22 @@
+.tag {
+  @apply inline-block mr-1 pt-1 pb-1.5 px-2 text-xs rounded-full border-dark1 border-2 text-dark1;
+}
+
+.tag-blue,
+.tag-react {
+  @apply bg-blue2;
+}
+
+.tag-yellow,
+.tag-javascript {
+  @apply bg-yellow1;
+}
+
+.tag-purple,
+.tag-algorithms {
+  @apply bg-purple2;
+}
+
+.tag-node {
+  @apply bg-green1;
+}

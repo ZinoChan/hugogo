@@ -1,3 +1,37 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Nunito+Sans:wght@400;600;700&family=Syne:wght@600;700;800&display=swap");
+
+@import "./tags.scss";
+@import "./ui.scss";
+
+html {
+  display: block;
+  font-size: 13px;
+  @media (min-width: 1024) {
+    font-size: 16px;
+  }
+}
+body {
+  @apply bg-light1 min-h-screen;
+  background-attachment: fixed;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-display font-normal text-dark1;
+}
+
+.container {
+  @apply max-w-screen-xl mx-auto px-3 md:px-8;
+}
+
+.grid-list {
+  @apply grid grid-cols-1 auto-cols-max gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 list-none;
+}
