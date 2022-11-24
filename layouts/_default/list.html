@@ -1,8 +1,8 @@
-{{define "main"}}
-
-<h1>{{ .Title }}</h1>
-{{ range .Pages.ByPublishDate.Reverse }}
-<p>
-  <a href="{{.RelPermalink}}"> {{.Title}} </a>
-</p>
-{{end}} {{end}}
+{{ define "header" }} {{ partial "topnav" }} {{ end }} {{ define "main" }}
+<h1>List</h1>
+{{ range .Pages }}
+<article>
+  <h2>{{ .Title }}</h2>
+  {{ .Content }}
+</article>
+{{ end }} {{ end }}

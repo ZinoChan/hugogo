@@ -1,9 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-  {{ partial "head.html" . }}
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="stylesheet" href="/svelte/{{ .Site.Data.svelte.css }}" />
+    <script type="module" defer src="/svelte/{{ .Site.Data.svelte.js }}" /></script>
+    <title>{{ .Page.Title }}</title>
+  </head>
   <body>
-    {{ partial "navbar.html" . }}
-    <main>{{ block "main" . }} {{ end }}</main>
-    {{ partial "footer.html" . }}
+    {{ block "header" . }}
+    <!-- navbar -->
+    {{ end }} {{ block "main" . }}
+    <!-- main -->
+    {{ end }} {{ block "footer" . }}
+    <!-- footer -->
+    {{ end }}
   </body>
 </html>
