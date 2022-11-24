@@ -1,1 +1,1 @@
-export * from "./components/hello-world.svelte";
+import "../styles/app.scss";
