@@ -1,0 +1,23 @@
+{{/* Horizontal Card */}}
+<article
+  class="max-w-sm overflow-hidden box box-grey bg-white y-6 transition-all ease-in-out duration-500"
+>
+  <a href="{{ .context.RelPermalink }}" class="no-underline">
+    {{ $img := cond (isset . "img") .img (print .context.RelPermalink
+    "img/featured.webp") }} {{ $img := cond (fileExists $img) $img
+    "/img/default-cover.webp" }}
+    <img class="w-full m-0 mb-1" src="{{ $img }}" alt="{{ .context.Title }}" />
+
+    <section class="px-4 pt-1 pb-4">
+      <span class="text-grey2 font-semibold text-sm self-end">
+        {{ math.Round (div (countwords .context.Content) 200.0) }} minutes read
+      </span>
+
+      <h5 class="text-3xl mb-2">{{ .context.Title }}</h5>
+      <p class="text-grey1 mb-3">{{ .context.Description }}</p>
+      {{ range .context.Params.tags }}
+      <span class="tag tag-{{ . }}"> #{{ . }} </span>
+      {{ end }}
+    </section>
+  </a>
+</article>
