@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+/* eslint-disable @typescript-eslint/no-var-requires */
+const colors = require("tailwindcss/colors");
 /* eslint-env node */
 
 module.exports = {
@@ -21,13 +23,22 @@ module.exports = {
       dark1: "#2c2d2c",
       grey1: "#5A5A5A",
       grey2: "#6F6F6F",
-      green1: "#90C53F",
+      grey3: "#e6e6e6",
+      green1: "#D9FF9F",
+      blue: colors.blue,
+      green: colors.green,
+      pink: colors.pink,
+      purple: colors.purple,
+      orange: colors.orange,
+      red: colors.red,
+      yellow: colors.yellow,
     },
     extend: {
       boxShadow: {
         1: "5px 4px #4158d0",
         2: "5px 4px #c850c0",
         3: "5px 4px #6f6f6f",
+        6: "1px 1px #6f6f6f",
       },
       typography: {
         DEFAULT: {
