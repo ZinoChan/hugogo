@@ -7,7 +7,7 @@
 }
 
 .box-grey {
-  @apply shadow-3 border-grey2;
+  @apply shadow-3 border-grey2 hover:shadow-2 hover:border-purple1;
 }
 
 .box-purple {
