@@ -39,3 +39,7 @@ svg {
 .grid-list {
   @apply grid grid-cols-1 auto-cols-max gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 list-none;
 }
+
+.prose {
+  max-width: none;
+}

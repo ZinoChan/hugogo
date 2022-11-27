@@ -63,6 +63,11 @@ module.exports = {
               "font-weight": "normal",
               "font-size": "1.25rem",
             },
+
+            p: {
+              "font-weight": "normal",
+              "font-size": "1.25rem",
+            },
           },
         },
       },
