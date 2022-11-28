@@ -9,7 +9,7 @@ module.exports = {
     fontFamily: {
       display: ["Syne", "sans-serif"],
       sans: ["Nunito Sans", "sans-serif"],
-      code: ["attribute-mono", "sans-serif"],
+      code: ["JetBrains Mono", "mono"],
     },
     colors: {
       light1: "#FFFBF3",
@@ -24,6 +24,13 @@ module.exports = {
       grey1: "#5A5A5A",
       grey2: "#6F6F6F",
       grey3: "#e6e6e6",
+      grey4: "#f8f8f8",
+      grey5: "#dbe1e8",
+      grey6: "#b2becd",
+      grey7: "#6c7983",
+      grey8: "#454e56",
+      grey9: "#2a2e35",
+      grey10: "#12181b",
       green1: "#D9FF9F",
       blue: colors.blue,
       green: colors.green,
