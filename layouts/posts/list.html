@@ -15,13 +15,76 @@
     </li>
     {{end}}
   </ul>
-  {{ else }} {{/* Layout for individual course landing page */}}
-  <header class="text-center my-12">
-    <h1 class="text-6xl mb-0 inline-block mx-auto">{{ .Params.title }}</h1>
-    <p class="text-gray3 my-1">{{ .Params.description }}</p>
-  </header>
+  {{ else }} {{/* Layout for individual post */}}
 
-  <article class="max-w-prose mx-auto">{{ .Content }}</article>
+  <div class="max-w-3xl mx-auto px-3">
+    <div class="flex pt-8 pb-10">
+      <a
+        class="group flex items-center font-sans font-semibold leading-6 text-grey2 hover:text-purple1 text-lg"
+        href="/posts/"
+      >
+        <svg
+          viewBox="0 -9 3 24"
+          class="overflow-visible mr-3 text-grey2 h-6 group-hover:text-grey1"
+        >
+          <path
+            d="M3 0L0 3L3 6"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></path>
+        </svg>
+        Go back</a
+      >
+    </div>
+    <header class="relative pt-10">
+      <h1 class="text-3xl font-bold mb-4 tracking-tight text-dark1 md:text-5xl">
+        {{ .Params.title }}
+      </h1>
+
+      <div class="text-sm leading-6">
+        <dl>
+          <dt class="sr-only">Date</dt>
+          <dd class="absolute top-0 inset-x-0 text-grey1">
+            <time datetime="2022-10-19T15:30:00.000Z"
+              >Wednesday, October 19, 2022</time
+            >
+          </dd>
+        </dl>
+      </div>
+      {{ $author := .Site.GetPage (print "/contributors/" (anchorize
+      .Params.Author)) }} {{ $authorImg := (print "/contributors/img/"
+      (anchorize .Params.Author) ".webp") }}
+      <div class="mt-6">
+        <ul class="flex flex-wrap text-sm leading-6 -mt-6 -mx-5">
+          <li
+            class="flex space-x-3 items-center font-medium whitespace-nowrap px-5 mt-6"
+          >
+            <img
+              class="w-11 h-11 rounded-full block"
+              src="{{ $authorImg }}"
+              alt="{{ $author.Title }} avatar"
+            />
+            <div class="text-sm leading-4">
+              <p class="text-grey1">
+                {{ title (.Params.authorname | default .Params.author) }}
+              </p>
+              <div class="mt-1">
+                <span class="text-blue-500 hover:text-blue-600">
+                  {{ .Params.authorEmail }}
+                </span>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <article class="prose prose-slate mt-12">{{ .Content }}</article>
+  </div>
+
   {{end}}
 </main>
 {{ end }} {{ define "footer" }} {{ partial "footer" }} {{ end }}
