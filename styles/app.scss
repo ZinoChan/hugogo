@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Nunito+Sans:wght@400;600;700&family=Syne:wght@600;700;800&display=swap");
-
+@import "./button.scss";
 @import "./tags.scss";
 @import "./ui.scss";
 @import "./syntax.scss";

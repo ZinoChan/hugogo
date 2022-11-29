@@ -1,0 +1,11 @@
+.btn {
+  @apply font-sans uppercase  font-bold inline-flex rounded-md cursor-pointer text-center shadow-3 hover:shadow-6 no-underline px-10 py-3 text-lg transition-shadow ease-in-out duration-200;
+}
+
+.btn-blue {
+  @apply bg-blue1 text-white;
+}
+
+.btn-yellow {
+  @apply bg-yellow1 text-dark1;
+}
