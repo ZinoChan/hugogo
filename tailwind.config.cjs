@@ -12,6 +12,7 @@ module.exports = {
       code: ["JetBrains Mono", "mono"],
     },
     colors: {
+      white: "#ffffff",
       light1: "#FFFBF3",
       blue1: "#4158d0",
       blue2: "#E0E5FF",
