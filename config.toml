@@ -1,4 +1,4 @@
-baseURL = "http://example.org/"
+baseURL = "https://zinochan.github.io/hugogo/"
 languageCode = "en-us"
 title = "My New Hugogo Site"
 enableRobotsTXT= true
