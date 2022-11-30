@@ -1,8 +1,18 @@
-{{ define "main" }}
+{{ define "header" }} {{ partial "topnav" }} {{ end }} {{ define "main" }}
 
-<div>
-  <h1>{{ .Site.Title }}</h1>
-  <p>{{ .Site.Params.homeText | markdownify }}</p>
+<div class="prose min-w-full mt-20">
+  <div class="container">
+    <div class="text-center my-20">
+      <h1 class="text-5xl font-black capitalize mb-4">Front-End Blog</h1>
+      <p class="font-sans text-grey2 text-lg mb-16">
+        Articles about Web Development and JavaScript.
+      </p>
+
+      <a href="/posts/" class="no-underline">
+        <button class="btn btn-yellow">posts</button>
+      </a>
+    </div>
+  </div>
 </div>
 
-{{ end }}
+{{ end }} {{ define "footer" }} {{ partial "footer" }} {{ end }}
