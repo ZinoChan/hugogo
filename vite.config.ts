@@ -25,6 +25,7 @@ export default defineConfig({
 
 function syncToHugo() {
   return {
+    name: "hugoSync",
     closeBundle: async () => {
       const svelteBuild = "./static/svelte";
       const assets = await readdir(svelteBuild);
