@@ -19,7 +19,7 @@ jobs:
           hugo-version: '0.101.0'
           extended: true
       - run: npm ci
-      - run: npm run build
+      - run: npm run build --coverage --json --outputFile="svelte.json"
 
   # Deployment job
   deploy:
