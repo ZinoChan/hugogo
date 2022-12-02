@@ -33,7 +33,6 @@ function syncToHugo() {
         name.match(/(index.)(?!.*?esm)(?!.*?css).*\w+/)
       )[0];
       const css = assets.filter((name) => name.includes(".css"))[0];
-      console.log(JSON.stringify({ js, css }))
       await Promise.all([
         writeFile(`./data/svelte.json`, JSON.stringify({ js, css })),
         rm("./static/svelte/index.html"),
