@@ -1,4 +1,4 @@
-baseURL = "https://zinochan.github.io/hugogo/"
+baseURL = "https://front-end-blog.netlify.app/"
 languageCode = "en-us"
 title = "My New Hugogo Site"
 enableRobotsTXT= true
