@@ -1,9 +1,11 @@
+@import "./mixins.scss";
 /* Background */
 .bg {
 }
 /* PreWrapper */
 .chroma {
   @apply bg-grey10 text-grey5 rounded-lg mt-0 font-code text-base overflow-x-auto drop-shadow-lg border-2 border-grey9;
+  @include scrollbar;
 }
 /* Other */
 .chroma .x {
